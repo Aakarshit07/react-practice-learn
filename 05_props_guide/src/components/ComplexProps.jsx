@@ -86,7 +86,7 @@ const ComplexProps = () => {
         secondary: {
           label: "Message",
           onClick: () => setMessage("Opening message to Alice"),
-          className: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+          className: "bg-amber-100 text-amber-800 hover:bg-amber-200",
         },
       },
     },
@@ -104,21 +104,21 @@ const ComplexProps = () => {
         },
       },
       theme: {
-        backgroundColor: "bg-gradient-to-br from-green-100 to-teal-100",
+        backgroundColor: "bg-gradient-to-br from-amber-100 to-orange-100",
         textColor: "text-gray-800",
-        avatarBg: "bg-green-300",
-        badgeBg: "bg-green-200",
+        avatarBg: "bg-amber-300",
+        badgeBg: "bg-amber-200",
       },
       actions: {
         primary: {
           label: "View Profile",
           onClick: () => setMessage("Viewing Bob's profile"),
-          className: "bg-green-500 text-white hover:bg-green-600",
+          className: "bg-amber-500 text-white hover:bg-amber-600",
         },
         secondary: {
           label: "Collaborate",
           onClick: () => setMessage("Starting collaboration with Bob"),
-          className: "bg-gray-200 text-gray-800 hover:bg-gray-300",
+          className: "bg-purple-100 text-purple-800 hover:bg-purple-200",
         },
       },
     },
