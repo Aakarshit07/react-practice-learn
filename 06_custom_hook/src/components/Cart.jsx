@@ -1,4 +1,4 @@
-import CartItem from "../components/CartItem.jsx";
+import CartItem from "../components/CartItem";
 
 const Cart = ({ cart, onUpdateQuantity, onRemove, total }) => {
   if (cart.length === 0) {

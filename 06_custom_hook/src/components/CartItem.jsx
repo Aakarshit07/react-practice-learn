@@ -1,10 +1,10 @@
 import { Minus, Plus, Trash2 } from "lucide-react";
 
-const CartItem = (item, onUpdateQuantity, onRemove) => {
+const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
   return (
     <div className="cart-item">
       <div className="item-details">
-        <h4>{item.name}</h4>
+        <h4>{item?.name}</h4>
         <p>{item.price}</p>
         <div className="quantity-controls">
           <button onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}>
