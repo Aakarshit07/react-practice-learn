@@ -14,10 +14,10 @@ const CartItem = ({ item, onUpdateQuantity, onRemove }) => {
           <button onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}>
             <Plus />
           </button>
+          <button onClick={() => onRemove(item.id)}>
+            <Trash2 />
+          </button>
         </div>
-        <button onClick={() => onRemove(item.id)}>
-          <Trash2 />
-        </button>
       </div>
     </div>
   );
