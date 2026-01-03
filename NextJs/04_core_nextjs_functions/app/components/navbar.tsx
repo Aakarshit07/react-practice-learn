@@ -16,34 +16,56 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link
               href="/"
-              className={`text-2xl font-bold ${
-                isActive("/") ? "text-blue-500" : "text-gray-800"
+              className={`text-sm border-2 rounded-lg shadow-xs px-2 py-1 font-mono font-semibold ${
+                isActive("/")
+                  ? "text-white bg-blue-600 border-blue-600"
+                  : "text-gray-800 border-gray-400"
               }`}
             >
               NextJs App
             </Link>
           </div>
+
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/search"
+              className={`text-sm border-2 rounded-lg shadow-xs px-2 py-1 font-mono font-semibold ${
+                isActive("/search")
+                  ? "text-white bg-blue-600 border-blue-600"
+                  : "text-gray-800 border-gray-400"
+              }`}
+            >
+              Search
+            </Link>
+          </div>
+
           <div className="flex items-center space-x-4">
             <Link
               href="/about"
-              className={`text-2xl font-bold ${
-                isActive("/about") ? "text-blue-500" : "text-gray-800"
+              className={`text-sm border-2 rounded-lg shadow-xs px-2 py-1 font-mono font-semibold ${
+                isActive("/about")
+                  ? "text-white bg-blue-600 border-blue-600"
+                  : "text-gray-800 border-gray-400"
               }`}
             >
               About
             </Link>
             <Link
               href="/products"
-              className={`text-2xl font-bold ${
-                isActive("/products") ? "text-blue-500" : "text-gray-800"
+              className={`text-sm border-2 rounded-lg shadow-xs px-2 py-1 font-mono font-semibold ${
+                isActive("/products")
+                  ? "text-white bg-blue-600 border-blue-600"
+                  : "text-gray-800 border-gray-400"
               }`}
             >
               Products
             </Link>
             <Link
               href="/reviews"
-              className={`text-2xl font-bold ${
-                isActive("/reviews") ? "text-blue-500" : "text-gray-800"
+              className={`text-sm border-2 rounded-lg shadow-xs px-2 py-1 font-mono font-semibold ${
+                isActive("/reviews")
+                  ? "text-white bg-blue-600 border-blue-600"
+                  : "text-gray-800 border-gray-400"
               }`}
             >
               Reviews
