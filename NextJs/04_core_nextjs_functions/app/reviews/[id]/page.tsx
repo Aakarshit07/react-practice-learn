@@ -8,7 +8,7 @@ const ReviewDetail = async ({
 }) => {
   const { id } = await params;
   if (parseInt(id) > 10) return notFound();
-  return <div>Reviews: {id}</div>;
+  return <div className="flex items-center justify-center">Reviews: {id}</div>;
 };
 
 export default ReviewDetail;
