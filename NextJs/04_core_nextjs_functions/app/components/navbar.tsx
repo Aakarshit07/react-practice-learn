@@ -70,6 +70,16 @@ export default function Navbar() {
             >
               Reviews
             </Link>
+            <Link
+              href="/login"
+              className={`text-sm border-2 rounded-lg shadow-xs px-2 py-1 font-mono font-semibold ${
+                isActive("/login")
+                  ? "text-white bg-blue-600 border-blue-600"
+                  : "text-gray-800 border-gray-400"
+              }`}
+            >
+              Login
+            </Link>
           </div>
         </div>
       </div>
