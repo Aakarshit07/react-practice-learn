@@ -17,16 +17,18 @@ const ContactForm = () => {
     setMessage("");
 
     const result = await createContact(formData);
-    console.log("Result: ", result);
+
+    console.log("Result: ", result, "formData: ", formData);
+
     if (result.success) {
       setMessage("Message sent successfully!");
-      const form = document.getElementById("contact_form");
-      //   form.reset;
+      // const form = document.getElementById("contact_form");
+      // form.reset();
 
       toast.success("Message sent successfully!");
     } else {
       setMessage(result.error || "Something went wrong");
-      toast.error("Message sent successfully!");
+      toast.error(result.error || "Something went wrong");
     }
     setIsSubmitting(false);
   };
