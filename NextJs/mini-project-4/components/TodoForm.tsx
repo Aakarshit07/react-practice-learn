@@ -1,0 +1,100 @@
+"use client";
+import React from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+
+// import { createTodoSchema } from "@/validations/todo";
+// import { useCreateTodo } from "@/hooks/use-create-todo";
+// import { toast } from "sonner";
+
+function TodoForm() {
+  return (
+    <Card className="mb-6">
+      <CardHeader>
+        <CardTitle>Create New Todo</CardTitle>
+      </CardHeader>
+      <CardContent>
+        {/* onSubmit={form.handleSubmit(onSubmit)} */}
+        <form className="space-y-4">
+          <div>
+            <Label htmlFor="title">Title *</Label>
+            <Input
+              id="title"
+              //   {...form.register("title")}
+              placeholder="Enter todo title..."
+            />
+            {/* {form.formState.errors.title && (
+              <p className="text-sm text-destructive mt-1">
+                {form.formState.errors.title.message}
+              </p>
+            )} */}
+          </div>
+
+          <div>
+            <Label htmlFor="description">Description</Label>
+            <Textarea
+              id="description"
+              //   {...form.register("description")}
+              placeholder="Enter description (optional)..."
+              rows={3}
+            />
+            {/* {form.formState.errors.description && (
+              <p className="text-sm text-destructive mt-1">
+                {form.formState.errors.description.message}
+              </p>
+            )} */}
+          </div>
+
+          <div>
+            <Label htmlFor="priority">Priority</Label>
+            <Select
+            //   value={form.watch("priority")}
+            //   onValueChange={(value) => form.setValue("priority", value)}
+            >
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="low">Low</SelectItem>
+                <SelectItem value="medium">Medium</SelectItem>
+                <SelectItem value="high">High</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="flex gap-2">
+            {/* disabled={createTodoMutation.isPending} */}
+            <Button type="submit">
+              {/* {createTodoMutation.isPending ? "Creating..." : "Create Todo"} */}
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              //   onClick={() => {
+              //     setIsOpen(false);
+              //     form.reset();
+              //   }}
+            >
+              Cancel
+            </Button>
+          </div>
+        </form>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default TodoForm;
